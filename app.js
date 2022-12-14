@@ -4,25 +4,14 @@
 
 /* -------------------------------------------------------- */
 
-const NAME = "Reyes";
+const NAME = "Algot";
 
 const CARDS = [
-  {
-    name: "Discord",
-    icon: "ri-discord-fill",
-    link: "https://discord.com/app",
-    color: "#5865F2",
-  },
   {
     name: "Reddit",
     icon: "ri-reddit-fill",
     link: "https://www.reddit.com/",
     color: "#FF4500",
-  },
-  {
-    name: "Figma",
-    icon: "ri-pen-nib-fill",
-    link: "https://www.figma.com/",
   },
   {
     name: "Github",
@@ -36,36 +25,10 @@ const CARDS = [
     color: "#1DA1F2",
   },
   {
-    name: "Dribbble",
-    icon: "ri-dribbble-fill",
-    link: "https://dribbble.com/",
-    color: "#ea4c89",
-  },
-  {
-    name: "Hashnode",
-    icon: "ri-newspaper-line",
-    link: "https://hashnode.com/",
-  },
-  {
-    name: "CodeSandbox",
-    icon: "ri-braces-fill",
-    link: "https://codesandbox.io/dashboard/",
-  },
-  {
     name: "YouTube",
     icon: "ri-youtube-fill",
-    link: "https://www.youtube.com/",
+    link: "https://www.youtube.com/feed/subscriptions",
     color: "#FF0000",
-  },
-  {
-    name: "LinkedIn",
-    icon: "ri-linkedin-fill",
-    link: "https://www.linkedin.com/",
-  },
-  {
-    name: "Gmail",
-    icon: "ri-google-fill",
-    link: "https://mail.google.com/",
   },
 ];
 
@@ -76,28 +39,28 @@ const CARDS = [
 /******************/
 
 const DAYS = [
-  "Sunday",
-  "Monday",
-  "Tuesday",
-  "Wednesday",
-  "Thursday",
-  "Friday",
-  "Saturday",
+  "måndag",
+  "tisdag",
+  "onsdag",
+  "torsdag",
+  "fredag",
+  "lördag",
+  "söndag",
 ];
 
 const MONTHS = [
-  "January",
-  "February",
-  "March",
-  "April",
-  "May",
-  "June",
-  "July",
-  "August",
-  "September",
-  "October",
-  "November",
-  "December",
+  "januari",
+  "februari",
+  "mars",
+  "april",
+  "maj",
+  "juni",
+  "juli",
+  "augisti",
+  "september",
+  "oktober",
+  "november",
+  "december",
 ];
 
 const updateDate = () => {
@@ -115,12 +78,15 @@ const updateDate = () => {
   let currentYear = completeDate.getFullYear();
 
   // Update the Time
-  currentTime.innerHTML = `${
-    currentHour % 12 == 0 ? "12" : currentHour % 12
-  }:${currentMinute} ${currentHour > 11 ? "PM" : "AM"}`;
+  currentTime.innerHTML = `${currentHour}:${currentMinute}`;
 
   // Update the Date
-  currentDate.innerHTML = `${DAYS[currentDay]} ${currentNumber}, ${MONTHS[currentMonth]} ${currentYear}`;
+  let currentNum = currentNumber.toString();
+  let lastDigitOfCurrentNumber = currentNum[currentNum.length - 1];
+  let ending = lastDigitOfCurrentNumber == 2 || lastDigitOfCurrentNumber == 1 
+        ? 'a' 
+        : 'e';
+  currentDate.innerHTML = `${DAYS[currentDay]} den ${currentNumber}${ending}, ${MONTHS[currentMonth]} ${currentYear}`;
 
   // Create a Loop
   setTimeout(() => {
