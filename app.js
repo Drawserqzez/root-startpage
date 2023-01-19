@@ -7,29 +7,40 @@
 const NAME = "Algot";
 
 const CARDS = [
-  {
-    name: "Reddit",
-    icon: "ri-reddit-fill",
-    link: "https://www.reddit.com/",
-    color: "#FF4500",
-  },
-  {
-    name: "Github",
-    icon: "ri-github-fill",
-    link: "https://github.com/",
-  },
-  {
-    name: "Twitter",
-    icon: "ri-twitter-fill",
-    link: "https://twitter.com",
-    color: "#1DA1F2",
-  },
-  {
-    name: "YouTube",
-    icon: "ri-youtube-fill",
-    link: "https://www.youtube.com/feed/subscriptions",
-    color: "#FF0000",
-  },
+    {
+        name: "Reddit",
+        icon: "ri-reddit-fill",
+        link: "https://www.reddit.com/",
+        color: "#FF4500",
+    },
+    {
+        name: "Github",
+        icon: "ri-github-fill",
+        link: "https://github.com/",
+    },
+    {
+        name: "Twitter",
+        icon: "ri-twitter-fill",
+        link: "https://twitter.com",
+        color: "#1DA1F2",
+    },
+    {
+        name: "YouTube",
+        icon: "ri-youtube-fill",
+        link: "https://www.youtube.com/feed/subscriptions",
+        color: "#FF0000",
+    },
+    {
+        name: "Homepage",
+        icon: "ri-home-2-fill",
+        link: "https://algot.holton.se/",
+    },
+    {
+        name: "Chess.com",
+        icon: "ri-function-fill",
+        link: "https://www.chess.com/",
+        color: "#394224",
+    }
 ];
 
 /* -------------------------------------------------------- */
